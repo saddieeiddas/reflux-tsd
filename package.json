@@ -1,0 +1,20 @@
+{
+  "name": "reflux-tsd",
+  "version": "0.1.0",
+  "description": "",
+  "main": "~",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "saddieeiddas <saddie.eiddas@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "typescript": {
+    "definitions": [
+      "eventemitter3/eventemitter3.d.ts",
+      "reflux/reflux-core.d.ts",
+      "reflux/reflux.d.ts"
+    ]
+  }
+}
