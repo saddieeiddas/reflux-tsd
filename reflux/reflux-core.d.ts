@@ -51,25 +51,25 @@ declare module __Reflux {
   }
 
   interface PublisherMethods {
-    preEmit(...args): void;
-    shouldEmit(...args): boolean;
-    listen(callback: Function, bindContext?: any): (...args) => {};
-    promise(promise: Promise): void;
-    listenAndPromise(callback: Function, bindContext?: any): (...args) => {};
-    trigger(...args): void;
-    triggerAsync(...args): void;
-    triggerPromise(...args): Promise<any>;
+    preEmit(...args: any[]): void;
+    shouldEmit(...args: any[]): boolean;
+    listen(callback: Function, bindContext?: any): (...args: any[]) => {};
+    promise(promise: Promise<any>): void;
+    listenAndPromise(callback: Function, bindContext?: any): (...args: any[]) => {};
+    trigger(...args: any[]): void;
+    triggerAsync(...args: any[]): void;
+    triggerPromise(...args: any[]): Promise<any>;
   }
 
   interface StoreMethods {
   }
 
   interface createAction {
-    (definition: any, ...args): any;
+    (definition: any, ...args: any[]): any;
   }
 
   interface createStore {
-    (definition: any, ...args): Store|any;
+    (definition: any, ...args: any[]): Store|any;
   }
 
   interface Store extends ListenerMethods, PublisherMethods, StoreMethods {
@@ -80,7 +80,7 @@ declare module __Reflux {
   }
 
   interface StaticJoin {
-    (...args): Store;
+    (...args: any[]): Store;
   }
 
   interface Utils {
